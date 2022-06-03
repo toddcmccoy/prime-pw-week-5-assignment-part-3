@@ -13,20 +13,22 @@ function addToCollection(title, artist, yearPublished){
     return album
 }// end addToCollection
 
-addToCollection('Nevermind ', 'Nirvana ', 1991);
-addToCollection('Kilroy Was Here ','Styx ', 1983);
-addToCollection('Paradise Theatre ','Styx ', 1981);
-addToCollection('Moving Pictures ','Rush ', 1981);
-addToCollection('Test for Echo ','Rush ', 1996);
-addToCollection('Second Helping ','Lynyrd Skynyrd ', 1974);
+addToCollection('Nevermind ', 'Nirvana', 1991);
+addToCollection('Kilroy Was Here ','Styx', 1983);
+addToCollection('Paradise Theatre ','Styx', 1981);
+addToCollection('Moving Pictures ','Rush', 1981);
+addToCollection('Test for Echo ','Rush', 1996);
+addToCollection('Second Helping ','Lynyrd Skynyrd', 1974);
 // end albums
 
 console.log(collection);
 
-function showCollection(){
-    for (let i = 0; i < collection.length; i++){
-        console.log(collection[i]);
+function showCollection(array){
+
+    console.log(array.length);
+    for (let i = 0; i < array.length; i++){
+        console.log(`${array[i].title}by ${array[i].artist},${array[i].yearPublished}`);
       }
 }
-console.log(collection.length);
-//showCollection;
+showCollection(collection);
+// end showCollection
