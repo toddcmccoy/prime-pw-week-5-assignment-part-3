@@ -32,3 +32,16 @@ function showCollection(array){
 }
 showCollection(collection);
 // end showCollection
+
+function findByArtist(band){
+    const vinyls = [];
+    for (let i = 0; i < collection.length; i++){
+        if  (collection[i].artist === band) {
+            vinyls.push(collection[i].artist, collection[i].title, collection[i].yearPublished);
+        }
+    }
+    console.log(vinyls);
+}// end findByArtist
+findByArtist('Styx');
+findByArtist('Ray Charles');
+findByArtist('Nirvana');
