@@ -1,6 +1,13 @@
 console.log('***** Music Collection *****')
 
-let collection=[];
+const collection=[];
+const vinyls = [];
+
+// const album = {
+//     title, 
+//     artist,
+//     yearPublished,
+//     }
 
 function addToCollection(title, artist, yearPublished){
     const album = {
@@ -34,14 +41,33 @@ showCollection(collection);
 // end showCollection
 
 function findByArtist(band){
-    const vinyls = [];
-    for (let i = 0; i < collection.length; i++){
-        if  (collection[i].artist === band) {
-            vinyls.push(collection[i].artist, collection[i].title, collection[i].yearPublished);
+        for (let i = 0; i < collection.length; i++){
+            if (collection[i].artist === band) {
+            let vinyl = {
+                title: collection[i].title,
+                artist: collection[i].artist,
+                yearPublished: collection[i].yearPublished
+            }
+            vinyls.push(vinyl);
         }
     }
-    console.log(vinyls);//this function seems too long to me, please see question/rant in index.html.
-}// end findByArtist
+    console.log(vinyls);
+    }// end findByArtist. definitely missing something here.
 findByArtist('Styx');
-findByArtist('Ray Charles');
-findByArtist('Nirvana');
+// findByArtist('Ray Charles');
+// findByArtist('Nirvana');
+showCollection(vinyls);
+// console.log(vinyls);
+
+
+// function search(artist, year){
+//     for (let i = 0; i < collection.length; i++){
+//         if  (collection[i].artist === artist && collection[i].yearPublished === year) {
+//             newVinyls.push(collection[i].artist, collection[i].title, collection[i].yearPublished);
+            
+//         }
+//         else if (collection[i].artist != artist || collection[i].yearPublished != year){
+
+//         }
+//     }
+// }
