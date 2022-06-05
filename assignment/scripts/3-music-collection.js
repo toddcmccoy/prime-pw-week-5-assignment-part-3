@@ -40,7 +40,7 @@ function findByArtist(band){
             vinyls.push(collection[i].artist, collection[i].title, collection[i].yearPublished);
         }
     }
-    console.log(vinyls);
+    console.log(vinyls);//this function seems too long to me, please see question/rant in index.html.
 }// end findByArtist
 findByArtist('Styx');
 findByArtist('Ray Charles');
